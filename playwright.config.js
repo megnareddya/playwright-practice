@@ -14,6 +14,15 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+
+  /* NEW: maximum time one whole test may run (default is 30000 ms) */
+  timeout: 40 * 1000,
+
+  /* NEW: maximum time each expect() assertion waits (default is 5000 ms) */
+  expect: {
+    timeout: 10 * 1000,
+  },
+
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -42,14 +51,13 @@ export default defineConfig({
 
     {
       name: 'firefox',
-     use: { ...devices['Desktop Firefox'] },
-   },
+      use: { ...devices['Desktop Firefox'] },
+    },
 
     //{
-      //name: 'webkit',
-      //use: { ...devices['Desktop Safari'] },
-   // }, 
-
+    //  name: 'webkit',
+    //  use: { ...devices['Desktop Safari'] },
+    //},
 
     /* Test against mobile viewports. */
     // {
@@ -79,4 +87,3 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
-
