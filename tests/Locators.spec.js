@@ -40,7 +40,7 @@ test('test5',async({page})=>{
 
 test('test6',async({page})=>{
     await page.goto('https://www.saucedemo.com/')
-    await page.getByTestId('username').fill('standard_user')
+    await page.locator('#user-name').fill('standard_user');
     await page.getByRole('textbox',{name:"Password"}).fill('secret_sauce')
     await page.getByRole('button',{name:"Login"}).click()
 

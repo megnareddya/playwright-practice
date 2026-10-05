@@ -2,6 +2,6 @@ const {test,expect}=require('@playwright/test')
 
 test('Assertions',async({page})=>{
 
-    await page.goto('')//go to website
+    await page.goto('https://rahulshettyacademy.com/loginpagePractise/')//go to website
 
 });
