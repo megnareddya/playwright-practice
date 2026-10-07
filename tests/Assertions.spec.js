@@ -1,3 +1,12 @@
+
+//toBeVisible()
+//toHaveTitle()
+//toHaveURL()
+//toHaveText()
+//toHaveCount()
+//toBeChecked(),toBeEnabled(),toBeDisabled().isChecked()
+
+
 const {test,expect}=require('@playwright/test')
 
 test('Assertions',async({page})=>{

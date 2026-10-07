@@ -40,6 +40,7 @@ await  un.fill('');//find username text box & fill it
 
     const product=await page.locator('.card-body a').nth(3).textContent();
     console.log(product);
+    console.log(await page.locator('.card-body a').allTextContents())//PRINTING ALL THE TITLES 
 
 });
 
