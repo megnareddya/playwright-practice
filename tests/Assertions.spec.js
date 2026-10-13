@@ -5,6 +5,7 @@
 //toHaveText()
 //toHaveCount()
 //toBeChecked(),toBeEnabled(),toBeDisabled().isChecked()
+//toHaveValue
 
 
 const {test,expect}=require('@playwright/test')
