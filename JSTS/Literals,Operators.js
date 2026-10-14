@@ -251,3 +251,22 @@ console.log('-----------');
 let api_response1 = "Pramod";
 let responsedata1 = api_response1 ?? "{}";
 console.log(responsedata1);
+console.log('--------------');
+let abc = 100;
+
+console.log(abc++ + ++abc +abc++ + ++abc);//100 + 102 + 102 + 104 
+
+console.log(abc);//104
+console.log('----------');
+let f= 37;
+console.log(--f + f--);// 36 + 36
+console.log(f);//35
+console.log('----------');
+let apple = 5; 
+let ball = apple-- - --apple; //5 - 3
+console.log(ball, apple);//2,3
+console.log('----------');
+let inox = 1; 
+
+let r = inox++ > 1 ? inox++ : ++inox; 
+console.log(r, inox);

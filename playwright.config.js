@@ -38,6 +38,10 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
+    /* FIX: Sauce Demo uses data-test (not Playwright's default data-testid),
+       so getByTestId('login-button') now matches in every test and every worker. */
+    testIdAttribute: 'data-test',
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
