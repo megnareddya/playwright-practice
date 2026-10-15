@@ -64,3 +64,10 @@ if((ages >= 18) || (hasPermission === true))
 else{
    console.log('not allowed'); 
 }
+let username = "";
+
+if (username) {
+  console.log("Hello " + username);
+} else {
+  console.log("Please enter a name");   // this runs, "" is falsy
+}

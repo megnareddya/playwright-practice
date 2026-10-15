@@ -45,7 +45,7 @@ test('addremove',async({page})=>{
 await page.goto('https://the-internet.herokuapp.com/add_remove_elements/',{waitUntil:'domcontentloaded'});
 //Click Add 5 times, assert 5 delete buttons, remove 2, and assert 3 remain.
 const addbutton=page.locator('button[onclick="addElement()"]');
-const deletebutton=page.locator('onclick="deleteElement()"');
+const deletebutton=page.locator('button[onclick="deleteElement()"]');
 for(let i=0;i<5;i++)
 {
     await addbutton.click();
